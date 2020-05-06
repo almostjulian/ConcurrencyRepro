@@ -1,7 +1,4 @@
 import requests
-from requests_kerberos import HTTPKerberosAuth
-from requests.adapters import HTTPAdapter
-from requests.auth import HTTPBasicAuth
 import urllib3
 import json
 from colorama import init, Fore, Style
