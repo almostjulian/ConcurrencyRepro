@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="repro.py" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -108,7 +109,9 @@
     <Compile Include="ReproService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="loop.bat" />
     <None Include="packages.config" />
+    <Content Include="startloop.bat" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

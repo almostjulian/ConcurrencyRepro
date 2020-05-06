@@ -18,18 +18,18 @@ namespace WebApplication1
     }
 
     [Route("/users/{UserName}", "GET", Summary = "Lists a single user")]
-    public class GetWindowsUser : IReturn<User>
+    public class GetUser : IReturn<User>
     {
         public string UserName { get; set; }
     }
     public class ReproService : Service
     {
         [CacheResponse(Duration = 43200, MaxAge = 21600)]
-        public User Any(GetWindowsUser request)
+        public User Any(GetUser request)
         {
-            return GetWindowsUser(request.UserName);
+            return GetUser(request.UserName);
         }
-        public static User GetWindowsUser(string userName)
+        public static User GetUser(string userName)
         {
             string json =
                 $"{{\"firstName\":\"{userName}\",\"lastName\":\"{userName}\",\"displayName\":\"{userName}\",\"userName\":\"{userName}\",\"employeeId\":\"9999\",\"employeeType\":\"E\",\"fwGroup\":\"Test\",\"email\":\"{userName}@foo.com\"}}";
